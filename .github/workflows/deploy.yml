@@ -9,9 +9,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      SERVER_HOST: ${{ secrets.SERVER_HOST }}
-      SERVER_USER: ${{ secrets.SERVER_USER }}
+      SSH_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+      SERVER_HOST: ${{secrets.SERVER_HOST}}
+      SERVER_USER: ${{secrets.SERVER_USER}}
     steps:
       - name: Deploy to server
         run: |
