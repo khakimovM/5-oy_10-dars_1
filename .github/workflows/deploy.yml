@@ -17,7 +17,7 @@ jobs:
         run: |
           echo "$SSH_KEY" > my_servre.pem 
           chmod 600 my_servre.pem
-          ssh -i my_servre.pem -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST '
+          ssh -i my_servre.pem -o StrictHostKeyChecking=no ubuntu@ec2-51-20-37-117.eu-north-1.compute.amazonaws.com '
           cd /home/ubuntu/app 
           git pull origin main 
           sudo docker-compose down
