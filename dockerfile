@@ -5,3 +5,4 @@ RUN yarn install --frozen-lockfile && yarn cache clean
 COPY . .
 EXPOSE 4000
 RUN yarn build
+RUN npx prisma migrate dev --name updated
