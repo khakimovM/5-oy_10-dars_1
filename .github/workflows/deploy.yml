@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > key.pem
           chmod 600 key.pem
-          ssh -i key.pem -o StrickHostKeyChecking=no $SERVER_USER@$SERVER_HOST <<EOF
+          ssh -i key.pem -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST <<EOF
           cd home/ubuntu/app
           echo "POST=${PORT}" > .env
           echo "POSTGRES_USER=${POSTGRES_USER}" >> .env
